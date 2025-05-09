@@ -9,13 +9,14 @@
   <meta name="theme-color" content="#000000">
   <link rel="stylesheet" href="style.css">
 </head>
-<body onclick="startCamera()">
-  <h1>CAMÉRA ACTIVE</h1>
+<body>
+  <h1>APPUIE POUR ACTIVER LA CAMÉRA</h1>
+  <button id="start">ACTIVER LA CAMÉRA</button>
   <section>
     <video playsinline autoplay muted></video>
     <aside></aside>
   </section>
-  <div class="filter-buttons">
+  <div class="filter-buttons hidden">
     <button class="filter-btn" data-hue="0">ROUGE</button>
     <button class="filter-btn" data-hue="120">VERT</button>
     <button class="filter-btn" data-hue="240">BLEU</button>
