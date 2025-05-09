@@ -57,13 +57,18 @@
 </head>
 <body>
   <h1>MODULE DE VISION - CODE NOIR</h1>
-  <video id="video" autoplay playsinline></video>
-  <div id="filters">
-    <button onclick="setFilter('none')">AUCUN</button>
-    <button onclick="setFilter('red')">ROUGE</button>
-    <button onclick="setFilter('green')">VERT</button>
-    <button onclick="setFilter('blue')">BLEU</button>
-  </div>
+  <section>
+  <video playsinline autoplay></video>
+  <aside></aside>
+</section>
+<main>
+  <ul>
+    <li><button id="start">Start</button></li>
+    <li><input type="radio" name="color" id="red" data-hue="0" checked><label for="red">Red</label></li>
+    <li><input type="radio" name="color" id="green" data-hue="120"><label for="green">Green</label></li>
+    <li><input type="radio" name="color" id="blue" data-hue="240"><label for="blue">Blue</label></li>
+  </ul>
+</main>
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('service-worker.js');
