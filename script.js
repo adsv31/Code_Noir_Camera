@@ -1,4 +1,4 @@
-window.addEventListener('load', () => {
+function startCamera() {
   navigator.mediaDevices.getUserMedia({
     video: { facingMode: { exact: "environment" } },
     audio: false
@@ -18,4 +18,4 @@ window.addEventListener('load', () => {
   });
 
   document.querySelector('aside').addEventListener('touchstart', e => e.preventDefault());
-});
+}
