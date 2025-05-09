@@ -1,4 +1,4 @@
-document.getElementById('start').addEventListener('click', function () {
+window.addEventListener('load', () => {
   navigator.mediaDevices.getUserMedia({
     video: { facingMode: { exact: "environment" } },
     audio: false
@@ -7,8 +7,6 @@ document.getElementById('start').addEventListener('click', function () {
     video.srcObject = stream;
     video.onloadedmetadata = () => video.play();
     document.documentElement.classList.add('streaming');
-    document.getElementById('start').style.display = 'none';
-    document.querySelector('.filter-buttons').classList.remove('hidden');
   }).catch(err => {
     alert("Erreur d'accès à la caméra : " + err);
   });
