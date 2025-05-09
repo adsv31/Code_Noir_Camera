@@ -47,6 +47,8 @@ aside {
   top: 3px; left: 6px; right: 6px; bottom: -3px;
   background: hsla(var(--hue, 0), 100%, 50%, 1);
   mix-blend-mode: multiply;
+  width: 99%;
+  height: 100%;
 }
 .filter-buttons {
   display: flex;
