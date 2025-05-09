@@ -16,12 +16,12 @@
     <aside></aside>
   </section>
   <main>
-    <ul>
-      <li><button id="start">LANCER</button></li>
-      <li><input type="radio" name="color" id="red" data-hue="0" checked><label for="red">ROUGE</label></li>
-      <li><input type="radio" name="color" id="green" data-hue="120"><label for="green">VERT</label></li>
-      <li><input type="radio" name="color" id="blue" data-hue="240"><label for="blue">BLEU</label></li>
-    </ul>
+    <div class="button-group">
+      <button id="start">LANCER</button>
+      <button class="filter-btn" data-hue="0">FILTRAGE ROUGE</button>
+      <button class="filter-btn" data-hue="120">FILTRAGE VERT</button>
+      <button class="filter-btn" data-hue="240">FILTRAGE BLEU</button>
+    </div>
   </main>
   <script src="script.js"></script>
 </body>
