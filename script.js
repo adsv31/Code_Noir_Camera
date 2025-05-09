@@ -19,8 +19,8 @@ document.querySelector('aside').addEventListener('touchstart', e => {
   e.preventDefault();
 });
 
-document.querySelectorAll('input[type=radio]').forEach(option => {
-  option.addEventListener('click', e => {
+document.querySelectorAll('.filter-btn').forEach(button => {
+  button.addEventListener('click', e => {
     document.documentElement.style.setProperty('--hue', e.target.dataset.hue);
   });
 });
