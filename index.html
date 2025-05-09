@@ -71,11 +71,14 @@
 
     const video = document.getElementById('video');
 
-    navigator.mediaDevices.getUserMedia({ video: true, audio: false })
-      .then(stream => { video.srcObject = stream; })
-      .catch(err => {
-        alert("Erreur caméra : " + err);
-      });
+    navigator.mediaDevices.getUserMedia({
+      video: { facingMode: { exact: "environment" } },
+      audio: false
+      })
+        .then(stream => { video.srcObject = stream; })
+        .catch(err => {
+          alert("Erreur caméra : " + err);
+        });
 
     function setFilter(color) {
       switch (color) {
