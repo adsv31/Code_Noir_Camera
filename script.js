@@ -1,18 +1,17 @@
-document.querySelector('button').addEventListener('click', function(e) {
+document.querySelector('#start').addEventListener('click', function () {
   navigator.mediaDevices.getUserMedia({
     audio: false,
     video: {
       facingMode: { exact: "environment" }
     }
   }).then(stream => {
-    var video = document.querySelector('video');
+    const video = document.querySelector('video');
     video.srcObject = stream;
-    video.onloadedmetadata = function() {
-      video.play();
-    };
+    video.onloadedmetadata = () => video.play();
     document.documentElement.classList.add('streaming');
   }).catch(err => {
-    console.log('error', err);
+    console.error("Erreur d'accès caméra :", err);
+    alert("La caméra arrière est inaccessible.");
   });
 });
 
@@ -20,10 +19,8 @@ document.querySelector('aside').addEventListener('touchstart', e => {
   e.preventDefault();
 });
 
-const options = Array.from(document.querySelectorAll('input[type=radio]'));
-
-options.forEach(option => {
+document.querySelectorAll('input[type=radio]').forEach(option => {
   option.addEventListener('click', e => {
-    document.documentElement.style.setProperty('--hue', e.currentTarget.getAttribute('data-hue'))
+    document.documentElement.style.setProperty('--hue', e.target.dataset.hue);
   });
 });
