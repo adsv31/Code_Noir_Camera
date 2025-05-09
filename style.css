@@ -1,19 +1,25 @@
-html {
-  font-size: 62.5%;
-}
 body {
+  margin: 0;
   background: black;
   color: red;
   font-family: 'Courier New', monospace;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
   overflow: hidden;
 }
+h1 {
+  margin-top: 20px;
+  font-size: 1.8em;
+  animation: flicker 1s infinite;
+}
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
 video {
-  max-height: 100vh;
-  max-width: 100vw;
+  max-height: 60vh;
+  width: 100vw;
+  border: 4px solid red;
+  background: black;
 }
 aside {
   position: absolute;
@@ -22,66 +28,34 @@ aside {
   mix-blend-mode: multiply;
 }
 main {
-  position: absolute;
-  top: 1rem;
-  left: 1em;
-  right: 1em;
+  margin-top: 10px;
 }
 main ul {
   display: flex;
-  justify-content: space-around;
-}
-@media all and (orientation: landscape) {
-  main ul {
-    flex-direction: column;
-  }
+  justify-content: center;
+  gap: 1em;
+  flex-wrap: wrap;
 }
 main li {
-  width: 7.5rem;
-  height: 7.5rem;
-  display: flex;
-  justify-content: stretch;
+  list-style: none;
 }
-main input {
-  position: absolute;
-  top: -100%;
+button, label {
+  font-size: 1em;
+  padding: 1em;
+  border: 2px solid red;
+  background: black;
+  color: red;
+  border-radius: 0.5em;
 }
-main label {
-  display: flex;
-  flex: 1;
-  justify-content: center;
-  background: hsl(var(--hue-label, 0),100%,50%);
-  font-size: 0;
-  line-height: 0;
-  border-radius: 50%;
-  border: .4rem solid rgba(0,0,0,.5);
-  transform: scale(.667);
-  transform-origin: center center;
-  transition: transform 175ms ease-in-out, opacity 175ms ease-in-out;
-  opacity: 0;
+button:hover, label:hover {
+  background: red;
+  color: black;
 }
-.streaming main label {
-  opacity: 1;
-}
-#green + label {
-  --hue-label: 120;
-}
-#blue + label {
-  --hue-label: 240;
-}
-input:checked + label {
-  border-color: rgba(255,255,255,.8);
-  transform: scale(1);
-}
-button {
-  appearance: none;
-  border: 0;
-  border-radius: 50%;
-  width: 7.5rem;
-  height: 7.5rem;
-  transition: 175ms opacity;
-  font-size: 1.6rem;
-}
-.streaming li:first-of-type {
+input[type=radio] {
   display: none;
 }
+.streaming label {
+  opacity: 1;
+}
+#green + label { --hue-label: 120; }
+#blue + label { --hue-label: 240; }
