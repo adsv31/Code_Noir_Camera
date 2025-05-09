@@ -10,7 +10,7 @@ html, body {
   overflow: hidden;
 }
 h1 {
-  margin-top: 0.8rem;
+  margin-top: 1rem;
   font-size: 1.5rem;
   animation: flicker 1s infinite;
 }
@@ -18,8 +18,7 @@ h1 {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.4; }
 }
-#start {
-  margin: 1em auto;
+button {
   font-size: 1.2rem;
   padding: 0.8em 1.6em;
   border: 2px solid red;
@@ -28,7 +27,7 @@ h1 {
   border-radius: 6px;
   cursor: pointer;
 }
-#start:hover {
+button:hover {
   background-color: red;
   color: black;
 }
@@ -54,20 +53,4 @@ aside {
   justify-content: center;
   gap: 0.8em;
   margin-top: 1rem;
-}
-.filter-buttons.hidden {
-  display: none;
-}
-button.filter-btn {
-  font-size: 1rem;
-  padding: 0.6em 1em;
-  border: 2px solid red;
-  background-color: black;
-  color: red;
-  cursor: pointer;
-  border-radius: 6px;
-}
-button.filter-btn:hover {
-  background-color: red;
-  color: black;
 }
