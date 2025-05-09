@@ -37,19 +37,28 @@ button:hover {
   background-color: red;
   color: black;
 }
+.video-wrapper {
+  width: 100vw;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+}
+
+.video-frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 3px;
+  background: red; /* cadre rouge */
+}
+
 video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  border: 3px solid red;
   display: block;
-}
-
-section {
-  position: relative;
-  width: 100vw;
-  height: 60vh;
-  overflow: hidden;
+  object-fit: cover;
 }
 
 aside {
@@ -61,6 +70,7 @@ aside {
   background: hsla(var(--hue, 0), 100%, 50%, 1);
   mix-blend-mode: multiply;
   pointer-events: none;
+  z-index: 10;
 }
 .filter-buttons {
   display: flex;
