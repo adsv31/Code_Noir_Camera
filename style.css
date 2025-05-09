@@ -37,17 +37,17 @@ section {
   height: 60vh;
 }
 video {
-  width: 99%;
+  width: 98%;
   height: 100%;
   object-fit: cover;
   border: 3px solid red;
 }
 aside {
   position: absolute;
-  top: 3px; left: 6px; right: 6px; bottom: -3px;
+  top: 3px; left: 3px; right: 6px; bottom: -3px;
   background: hsla(var(--hue, 0), 100%, 50%, 1);
   mix-blend-mode: multiply;
-  width: 99%;
+  width: 98%;
   height: 100%;
 }
 .filter-buttons {
