@@ -1,6 +1,6 @@
 self.addEventListener('install', e => {
   e.waitUntil(
-    caches.open('noir-cam').then(cache => {
+    caches.open('code-noir-cache').then(cache => {
       return cache.addAll([
         './index.html',
         './style.css',
