@@ -3,6 +3,7 @@ self.addEventListener('install', e => {
     caches.open('code-noir-cache').then(cache => {
       return cache.addAll([
         './index.html',
+        './camera.html',
         './style.css',
         './script.js',
         './manifest.json',
