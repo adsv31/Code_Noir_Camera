@@ -1,4 +1,7 @@
 function startCamera() {
+  if (window.hasStarted) return;
+  window.hasStarted = true;
+
   navigator.mediaDevices.getUserMedia({
     video: { facingMode: { exact: "environment" } },
     audio: false
