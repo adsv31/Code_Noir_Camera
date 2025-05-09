@@ -37,14 +37,14 @@ section {
   height: 60vh;
 }
 video {
-  width: 100%;
+  width: 99%;
   height: 100%;
   object-fit: cover;
   border: 3px solid red;
 }
 aside {
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 3px; left: 6px; right: 6px; bottom: -3px;
   background: hsla(var(--hue, 0), 100%, 50%, 1);
   mix-blend-mode: multiply;
 }
