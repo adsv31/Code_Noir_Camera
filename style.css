@@ -18,6 +18,20 @@ h1 {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.4; }
 }
+#start {
+  margin: 1em auto;
+  font-size: 1.2rem;
+  padding: 0.8em 1.6em;
+  border: 2px solid red;
+  background-color: black;
+  color: red;
+  border-radius: 6px;
+  cursor: pointer;
+}
+#start:hover {
+  background-color: red;
+  color: black;
+}
 section {
   position: relative;
   width: 100vw;
@@ -41,7 +55,10 @@ aside {
   gap: 0.8em;
   margin-top: 1rem;
 }
-button {
+.filter-buttons.hidden {
+  display: none;
+}
+button.filter-btn {
   font-size: 1rem;
   padding: 0.6em 1em;
   border: 2px solid red;
@@ -50,7 +67,7 @@ button {
   cursor: pointer;
   border-radius: 6px;
 }
-button:hover {
+button.filter-btn:hover {
   background-color: red;
   color: black;
 }
