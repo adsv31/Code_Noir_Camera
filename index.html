@@ -10,15 +10,15 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>ACTIVATION DE LA CAMÉRA TACTIQUE</h1>
-  <section>
-    <video playsinline autoplay></video>
+  <h1>APPUIE POUR ACTIVER LA CAMÉRA</h1>
+  <section onclick="startCamera()">
+    <video playsinline autoplay muted></video>
     <aside></aside>
   </section>
   <div class="filter-buttons">
-    <button class="filter-btn" data-hue="0">FILTRE ROUGE</button>
-    <button class="filter-btn" data-hue="120">FILTRE VERT</button>
-    <button class="filter-btn" data-hue="240">FILTRE BLEU</button>
+    <button class="filter-btn" data-hue="0">ROUGE</button>
+    <button class="filter-btn" data-hue="120">VERT</button>
+    <button class="filter-btn" data-hue="240">BLEU</button>
   </div>
   <script>
     if ('serviceWorker' in navigator) {
