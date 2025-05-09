@@ -1,6 +1,6 @@
 {
-  "name": "Code Noir - Caméra",
-  "short_name": "CodeNoirCam",
+  "name": "Code Noir Caméra",
+  "short_name": "NoirCam",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#000000",
