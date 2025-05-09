@@ -28,34 +28,24 @@ aside {
   mix-blend-mode: multiply;
 }
 main {
-  margin-top: 10px;
+  margin-top: 30px;
 }
-main ul {
+.button-group {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   gap: 1em;
-  flex-wrap: wrap;
 }
-main li {
-  list-style: none;
-}
-button, label {
-  font-size: 1em;
-  padding: 1em;
+button {
+  font-size: 1.2em;
+  padding: 1em 2em;
   border: 2px solid red;
   background: black;
   color: red;
   border-radius: 0.5em;
+  cursor: pointer;
 }
-button:hover, label:hover {
+button:hover {
   background: red;
   color: black;
 }
-input[type=radio] {
-  display: none;
-}
-.streaming label {
-  opacity: 1;
-}
-#green + label { --hue-label: 120; }
-#blue + label { --hue-label: 240; }
