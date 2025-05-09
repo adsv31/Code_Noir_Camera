@@ -1,7 +1,4 @@
-function startCamera() {
-  if (window.hasStarted) return;
-  window.hasStarted = true;
-
+document.getElementById('start').addEventListener('click', function () {
   navigator.mediaDevices.getUserMedia({
     video: { facingMode: { exact: "environment" } },
     audio: false
@@ -10,6 +7,8 @@ function startCamera() {
     video.srcObject = stream;
     video.onloadedmetadata = () => video.play();
     document.documentElement.classList.add('streaming');
+    document.getElementById('start').style.display = 'none';
+    document.querySelector('.filter-buttons').classList.remove('hidden');
   }).catch(err => {
     alert("Erreur d'accès à la caméra : " + err);
   });
@@ -21,4 +20,4 @@ function startCamera() {
   });
 
   document.querySelector('aside').addEventListener('touchstart', e => e.preventDefault());
-}
+});
