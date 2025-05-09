@@ -1,26 +1,21 @@
-document.querySelector('#start').addEventListener('click', function () {
+window.addEventListener('load', () => {
   navigator.mediaDevices.getUserMedia({
-    audio: false,
-    video: {
-      facingMode: { exact: "environment" }
-    }
+    video: { facingMode: { exact: "environment" } },
+    audio: false
   }).then(stream => {
     const video = document.querySelector('video');
     video.srcObject = stream;
     video.onloadedmetadata = () => video.play();
     document.documentElement.classList.add('streaming');
   }).catch(err => {
-    console.error("Erreur d'accès caméra :", err);
-    alert("La caméra arrière est inaccessible.");
+    alert("Erreur d'accès à la caméra : " + err);
   });
-});
 
-document.querySelector('aside').addEventListener('touchstart', e => {
-  e.preventDefault();
-});
-
-document.querySelectorAll('.filter-btn').forEach(button => {
-  button.addEventListener('click', e => {
-    document.documentElement.style.setProperty('--hue', e.target.dataset.hue);
+  document.querySelectorAll('.filter-btn').forEach(button => {
+    button.addEventListener('click', e => {
+      document.documentElement.style.setProperty('--hue', e.target.dataset.hue);
+    });
   });
+
+  document.querySelector('aside').addEventListener('touchstart', e => e.preventDefault());
 });
