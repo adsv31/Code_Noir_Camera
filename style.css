@@ -44,7 +44,7 @@ video {
 }
 aside {
   position: absolute;
-  top: 3px; left: 3px; right: 6px; bottom: -3px;
+  top: 3px; left: 4px; right: 6px; bottom: -3px;
   background: hsla(var(--hue, 0), 100%, 50%, 1);
   mix-blend-mode: multiply;
   width: 98%;
