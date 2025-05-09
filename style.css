@@ -1,9 +1,3 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 html, body {
   margin: 0;
   padding: 0;
@@ -37,40 +31,22 @@ button:hover {
   background-color: red;
   color: black;
 }
-.video-wrapper {
+section {
+  position: relative;
   width: 100vw;
   height: 60vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: black;
 }
-
-.video-frame {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  padding: 3px;
-  background: red; /* cadre rouge */
-}
-
 video {
   width: 100%;
   height: 100%;
-  display: block;
   object-fit: cover;
+  border: 3px solid red;
 }
-
 aside {
   position: absolute;
-  top: 3px;
-  left: 3px;
-  right: 3px;
-  bottom: 3px;
+  top: 0; left: 0; right: 0; bottom: 0;
   background: hsla(var(--hue, 0), 100%, 50%, 1);
   mix-blend-mode: multiply;
-  pointer-events: none;
-  z-index: 10;
 }
 .filter-buttons {
   display: flex;
