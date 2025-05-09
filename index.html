@@ -1,31 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>CAMÉRA TACTIQUE - CODE NOIR</title>
-  <link rel="manifest" href="manifest.json" />
-  <link rel="icon" href="icon.png" />
-  <meta name="theme-color" content="#000000">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accès à la Caméra</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <h1>APPUIE POUR ACTIVER LA CAMÉRA</h1>
-  <button id="start">ACTIVER LA CAMÉRA</button>
-  <section>
-    <video playsinline autoplay muted></video>
-    <aside></aside>
-  </section>
-  <div class="filter-buttons hidden">
-    <button class="filter-btn" data-hue="0">ROUGE</button>
-    <button class="filter-btn" data-hue="120">VERT</button>
-    <button class="filter-btn" data-hue="240">BLEU</button>
-  </div>
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('service-worker.js');
-    }
-  </script>
-  <script src="script.js"></script>
+<body class="home">
+  <h1>ACCÈS CAMÉRA NÉCESSAIRE</h1>
+  <p>Appuie pour autoriser l'utilisation de la caméra arrière</p>
+  <button onclick="window.location.href='camera.html'">AUTORISER</button>
 </body>
 </html>
