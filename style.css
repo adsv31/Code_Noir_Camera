@@ -64,7 +64,7 @@ video {
 aside {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: hsla(var(--hue, 0), 100%, 50%, 1);
+  background: hsla(var(--hue, 120), 100%, 50%, 1);
   mix-blend-mode: multiply;
   pointer-events: none;
   z-index: 2;
