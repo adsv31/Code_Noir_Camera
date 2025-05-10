@@ -14,10 +14,12 @@ h1 {
   font-size: 1.5rem;
   animation: flicker 1s infinite;
 }
+
 @keyframes flicker {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.4; }
 }
+
 button {
   font-size: 1.2rem;
   padding: 0.8em 1.6em;
@@ -27,15 +29,18 @@ button {
   border-radius: 6px;
   cursor: pointer;
 }
+
 button:hover {
   background-color: red;
   color: black;
 }
+
 section {
   position: relative;
   width: 100vw;
   height: 60vh;
 }
+
 .camera-container {
   display: flex;
   justify-content: center;
@@ -72,6 +77,7 @@ aside {
     width: 98%;
   height: 100%;
 }
+
 .filter-buttons {
   display: flex;
   justify-content: center;
