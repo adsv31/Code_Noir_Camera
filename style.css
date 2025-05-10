@@ -50,14 +50,14 @@ video {
   
 }
 
-*/
+
 .camera-wrapper::before{
   content:"";
   position:absolute; inset:0;
   background:hsla(var(--hue,120),100%,50%,1);
   mix-blend-mode:multiply;
   pointer-events:none;
-  z-index:2;          /* au‑dessus de la vidéo, sous la bordure */
+  z-index:2;       
 }
 
 .border-overlay{
